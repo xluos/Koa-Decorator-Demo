@@ -13,17 +13,3 @@ app.use(router.routes())
 app.listen(3000, () => {
   console.log('server start!')
 });
-
-async function UserInfoController (ctx, next) {
-  ctx.body = { name: 'test user info' }
-  await next()
-}
-
-async function UserListController (ctx, next) {
-  ctx.body = []
-  await next()
-}
-async function UserCreateController (ctx, next) {
-  ctx.body = 'ok'
-  await next()
-}
